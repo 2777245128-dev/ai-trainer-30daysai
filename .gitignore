@@ -1,0 +1,27 @@
+# 数据文件
+data/
+*.csv
+*.jsonl
+*.parquet
+*.xlsx
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# 输出
+outputs/
+reports/
+*.pdf
+
+# 日志
+*.log
+logs/
