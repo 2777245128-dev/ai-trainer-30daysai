@@ -1,0 +1,38 @@
+{
+  "file": "data/raw/employees_dirty.csv",
+  "total_rows": 30,
+  "null_counts": {
+    "id": 0,
+    "name": 0,
+    "age": 4,
+    "city": 0,
+    "email": 1,
+    "join_date": 1,
+    "salary": 1
+  },
+  "duplicates_rows": {
+    "count": 2,
+    "details": [
+      {
+        "line_no": 11,
+        "name": "张三"
+      },
+      {
+        "line_no": 21,
+        "name": "李四"
+      }
+    ]
+  },
+  "invalid_dates": {
+    "count": 7,
+    "details": [
+      "第 3 行:2024/01/06",
+      "第 4 行:2024.01.07",
+      "第 6 行:2024年1月9日",
+      "第 10 行:01/13/2024",
+      "第 17 行:2024-13-19",
+      "第 18 行:2024-02-30",
+      "第 21 行:2024/01/06"
+    ]
+  }
+}
