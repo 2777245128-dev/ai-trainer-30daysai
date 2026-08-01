@@ -31,3 +31,11 @@ report= {
 with open("data/cleaning_report.json","w",encoding="utf-8") as f:
     json.dump(report,f,ensure_ascii=False,indent=2)
 print("JSON报告已生成: data/cleaning_report.json")
+# 去重：按业务指纹，保留第一次出现的
+df_clean = df.drop_duplicates(subset=["name", "age", "city", "email"])
+
+# 日期标准化：全部统一成标准格式，妖怪变 NaT（空）
+df_clean["join_date"] = pd.to_datetime(df_clean["join_date"], format="mixed", errors="coerce")
+
+# 导出干净数据
+df_clean.to_csv("data/employees_clean.csv", index=False, encoding="utf-8")
